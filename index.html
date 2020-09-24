@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Reto Calculadora</title>
+
+	<!-- para bootrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+	<!-- para alerttfy-->
+	<link rel="stylesheet" type="text/css" href="./assets/css/alertify.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/themes/default.css">
+
+
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+
+<body>
+	<div class="containerTodo " >
+
+		<div class="row">
+
+		<div class="col-6 calculadora bg-dark p-3"> 
+		 
+			
+			<div class="resultado" id="resultado"></div>
+			<div class="resultado" id="cadenaOperaciones"></div>
+
+			<div class="contenedorBotonesTipoM">
+				<div><button class="btn opacidad25" onclick="funcion('MC')" id="btn_01"> MC </button></div>
+				<div><button class="btn opacidad25" onclick="funcion('MR')" id="btn_02"> MR </button></div>
+				<div><button class="btn opacidad25" onclick="funcion('M+')" id="btn_03"> M+ </button></div>
+				<div><button class="btn opacidad25" onclick="funcion('M-')" id="btn_03"> M- </button></div>
+				<div><button class="btn opacidad25" onclick="funcion('MS')" id="btn_03"> MS </button></div>
+			</div>
+
+			<div class="contenedorBotones">
+				<div><button class="btn opacidad50" onclick="operacion('por')" id="btn_04"> % </button></div>
+				<div><button class="btn opacidad50" onclick="funcion('CE')" id="btn_05"> CE </button></div>
+				<div><button class="btn opacidad50" onclick="funcion('C')" id="btn_06"> C </button></div>
+				<div><button class="btn opacidad50" onclick="funcion('BAC')" id="btn_06"> ← </button></div>
+				
+			</div>
+
+			<div class="contenedorBotones">
+				<div><button class="btn opacidad50" onclick="odirecta('fra')" id="btn_04"> 1/x </button></div>
+				<div><button class="btn opacidad50" onclick="odirecta('ele')" id="btn_05"> x² </button></div>
+				<div><button class="btn opacidad50" onclick="odirecta('rai')" id="btn_06"> ²√x </button></div>
+				<div><button class="btn opacidad50" onclick="operacion('div')" id="btn_06"> ÷ </button></div>
+			</div>
+
+
+			<div class="contenedorBotones">
+				<div><button class="btn" onclick="numero('7')" id="btn_04"> 7 </button></div>
+				<div><button class="btn" onclick="numero('8')" id="btn_05"> 8 </button></div>
+				<div><button class="btn" onclick="numero('9')" id="btn_06"> 9 </button></div>
+				<div><button class="btn opacidad50" onclick="operacion('mul')" id="btn_06"> x </button></div>
+			</div>
+			<div class="contenedorBotones">
+				<div><button class="btn" onclick="numero('4')" id="btn_04"> 4 </button></div>
+				<div><button class="btn" onclick="numero('5')" id="btn_05"> 5 </button></div>
+				<div><button class="btn" onclick="numero('6')" id="btn_06"> 6 </button></div>
+				<div><button class="btn opacidad50" onclick="operacion('res')" id="btn_06"> - </button></div>
+			</div>
+
+			<div class="contenedorBotones">
+				<div><button class="btn" onclick="numero('1')" id="btn_04"> 1 </button></div>
+				<div><button class="btn" onclick="numero('2')" id="btn_05"> 2 </button></div>
+				<div><button class="btn" onclick="numero('3')" id="btn_06"> 3 </button></div>
+				<div><button class="btn opacidad50" onclick="operacion('sum')" id="btn_06"> + </button></div>
+			</div>
+			<div class="contenedorBotones">
+				<div><button class="btn" onclick="odirecta('sig')" id="btn_04"> +/- </button></div>
+				<div><button class="btn" onclick="numero('0')" id="btn_05"> 0 </button></div>
+				<div><button class="btn" onclick="numero('.')" id="btn_06"> . </button></div>
+				<div><button class="btn opacidad25" onclick="operacion('rta')" id="btn_06"> = </button></div>
+			</div>
+		
+		
+		
+            
+		</div>
+
+		<div class="col-4 hisorial bg-secondary">
+
+			<div class="menu"></div>
+
+			<div class="itemHistoria">  
+			 
+				<ol class="text-white" id="lista">
+					<li> Historial </li>
+		        </ol>
+
+			</div>
+
+		  
+			
+
+		</div>
+
+        </div>
+
+
+
+		<footer>
+     
+			<div class="d-flex justify-content-center align-items-center mt-5"> 
+				<h3 class="m-3"> by: Jesus Ropero B</h3>
+			</div>
+   
+	   </footer>
+
+		<script src="./assets/js/calculadora.js"></script>
+
+		<!-- para alertufy-->
+		<script src="./assets/js/jquery-3.2.1.min.js"></script>
+		<script src="./assets/js/alertify.js"></script>
+
+		<!-- para boostrap-->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+			integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+			crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+			integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+			crossorigin="anonymous"></script>
+
+</body>
